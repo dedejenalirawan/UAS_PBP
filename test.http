@@ -1,0 +1,97 @@
+POST http://localhost:3000/api/users
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "dede",
+  "password": "ti22a",
+  "name": "Dede Jenal Irawan"
+}
+
+###
+
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username" : "dede",
+  "password" : "ti22a"
+}
+
+###
+
+GET http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+###
+
+PATCH http://localhost:3000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+{
+  "name" : "Dede Jenal Irawan"
+}
+
+###
+
+DELETE http://localhost:3000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+###
+
+POST http://localhost:3000/api/cars
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+{
+  "merek": "bmw",
+  "model": "city",
+  "tahun_produksi": "2003",
+  "warna": "biru",
+  "bahan_bakar": "solar",
+  "kilometer_tempuh": "200000"
+}
+
+###
+
+GET http://localhost:3000/api/cars
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+###
+
+GET http://localhost:3000/api/cars?merek=honda
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
+### Update
+
+PUT http://localhost:3000/api/cars/6
+Content-Type: application/json
+Accept: application/json
+Authorization:77324632-6bfb-4cea-b2fa-51b1cdf8960e
+
+{
+  "merek": "suzuki",
+  "model": "agya",
+  "tahun_produksi": "2014",
+  "warna": "green",
+  "bahan_bakar": "bensin",
+  "kilometer_tempuh": "14000"
+}
+
+### Delete Car
+
+DELETE http://localhost:3000/api/cars/6
+Content-Type: application/json
+Accept: application/json
+Authorization: 77324632-6bfb-4cea-b2fa-51b1cdf8960e
